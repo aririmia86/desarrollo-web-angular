@@ -5,8 +5,11 @@ var MyPerson = (function () {
         this.first_name = _first_name;
         this.last_name = _last_name;
     }
+    MyPerson.prototype.getSaludo = function () {
+        var emojis = '(⌐■_■)';
+        return "Saludos:\n\t\t    " + this.first_name + " " + this.last_name + ",\n\t\t    te enviamos un emojis de la consola\n\t\t" + emojis;
+    };
     return MyPerson;
 }());
-var personaUno = new MyPerson();
-var personaDos = new MyPerson("Alejandro");
 var personaTres = new MyPerson("Alejandro", "Irimia");
+console.log(personaTres.getSaludo());

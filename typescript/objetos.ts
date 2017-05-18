@@ -8,8 +8,15 @@ class MyPerson {
 		this.first_name = _first_name;
 		this.last_name = _last_name;
 	}
+
+	getSaludo():string{
+		let emojis = '(⌐■_■)';
+		return `Saludos:
+		    ${this.first_name} ${this.last_name},
+		    te enviamos un emojis de la consola
+		` + emojis;
+	}
 }
 
-let personaUno = new MyPerson();
-let personaDos = new MyPerson("Alejandro");
 let personaTres = new MyPerson("Alejandro","Irimia");
+console.log(personaTres.getSaludo());
